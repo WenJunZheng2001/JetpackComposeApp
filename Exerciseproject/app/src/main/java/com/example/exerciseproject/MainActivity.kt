@@ -40,6 +40,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -58,7 +59,6 @@ import com.example.exerciseproject.viewModelStore.BlockNoteViewModel
 
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -93,7 +93,7 @@ fun HomeScreen(navController: NavController, viewModel: BlockNoteViewModel){
     Scaffold(
         topBar = {
             TopAppBar(
-                title= {Text("Block Note", fontWeight = FontWeight.SemiBold)},
+                title= {Text("My Block Note", fontWeight = FontWeight.SemiBold)},
                 actions = {
                     IconButton(onClick = {
                         navController.navigate(DetailScreenRoute(null,"New Note"))
