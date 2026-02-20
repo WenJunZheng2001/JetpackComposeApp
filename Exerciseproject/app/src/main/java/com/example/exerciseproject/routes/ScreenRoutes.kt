@@ -1,6 +1,5 @@
 package com.example.exerciseproject.routes
 
-import com.example.exerciseproject.models.NoteInfo
 import kotlinx.serialization.Serializable
 
 
@@ -8,4 +7,4 @@ import kotlinx.serialization.Serializable
 object HomeScreenRoute
 
 @Serializable
-data class DetailScreenRoute(val title: String? = null)
+data class DetailScreenRoute(val noteId: Int?, val appBarTitle:String)
