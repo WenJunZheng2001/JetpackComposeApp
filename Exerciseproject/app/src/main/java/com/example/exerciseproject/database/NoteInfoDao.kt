@@ -4,12 +4,12 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.exerciseproject.models.NoteInfo
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NoteInfoDao {
     @Query("SELECT * FROM noteInfo")
-    fun getAll(): List<NoteInfo>
+    fun getAll(): Flow<List<NoteInfoEntity>>
 
 //    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
 //    fun loadAllByIds(userIds: IntArray): List<NoteInfo>
@@ -19,8 +19,8 @@ interface NoteInfoDao {
 //    fun findByName(title: String, description: String): NoteInfo
 
     @Insert
-    fun insert(noteInfo: NoteInfo)
+    suspend fun insert(noteInfo: NoteInfoEntity)
 
     @Delete
-    fun delete(id: Int)
+    suspend fun delete(noteInfo: NoteInfoEntity)
 }

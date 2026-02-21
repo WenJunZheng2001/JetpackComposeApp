@@ -2,7 +2,6 @@ package com.example.exerciseproject.routes
 
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 object HomeScreenRoute
 

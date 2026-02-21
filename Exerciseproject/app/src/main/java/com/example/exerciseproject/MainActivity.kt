@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -52,15 +53,27 @@ import com.example.exerciseproject.models.NoteInfo
 
 import com.example.exerciseproject.routes.DetailScreenRoute
 import com.example.exerciseproject.routes.HomeScreenRoute
+import com.example.exerciseproject.services.NoteInfoRepository
 
 import com.example.exerciseproject.ui.theme.ExerciseProjectTheme
 import com.example.exerciseproject.viewModelStore.BlockNoteViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+<<<<<<< Updated upstream
+=======
+    // Hilt will inject here
+@Inject lateinit var test: NoteInfoRepository
+>>>>>>> Stashed changes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+test.test()
+
         enableEdgeToEdge()
         setContent {
             ExerciseProjectTheme {
