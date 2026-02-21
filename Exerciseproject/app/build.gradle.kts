@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     kotlin("plugin.serialization") version "2.3.10"
-    id("com.google.devtools.ksp") version "2.3.6"
 }
 
 android {
@@ -15,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.exerciseproject"
-        minSdk = 32
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -62,6 +61,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     implementation(libs.androidx.room.runtime)
-    implementation("com.google.dagger:hilt-android:2.59.1")
-    ksp("com.google.dagger:dagger-compiler:2.59.1")
+
+
 }
